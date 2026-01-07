@@ -7,12 +7,34 @@ function Header() {
 
   return (
     <header className="header">
-      <h1 className="logo">&lt;/EnriqueUrib3&gt;</h1>
-
-      <nav className="nav" ref={navRef}>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
+      <nav className="navbar navbar-expand-lg navbar-dark" ref={navRef}>
+        <div className="container">
+          <h1 className="navbar-brand logo mb-0">&lt;/EnriqueUrib3&gt;</h1>
+          <button 
+            className="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link" href="#sobre-mi">Sobre mí</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#proyectos">Proyectos</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#contacto">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
   );
