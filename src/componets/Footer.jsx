@@ -13,7 +13,10 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <h3>Enrique Uribe</h3>
-            <p>Full Stack Developer especializado en aplicaciones web modernas y arquitecturas escalables.</p>
+            <p>
+              Full Stack Developer con experiencia en proyectos profesionales, prácticas,
+              TFGs y muchas ganas de nuevos desafíos.
+            </p>
             <div className="footer-social">
               <a href="https://github.com/enri892" className="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                 <FaGithub />
@@ -28,6 +31,8 @@ function Footer() {
             <h4>Enlaces Rápidos</h4>
             <nav className="footer-nav">
               <a href="#sobre-mi">Sobre Mí</a>
+              <a href="#experiencia">Experiencia</a>
+              <a href="#perfil">Perfil</a>
               <a href="#proyectos">Proyectos</a>
               <a href="#contacto">Contacto</a>
             </nav>
@@ -57,7 +62,7 @@ function Footer() {
             <p>&copy; {currentYear} Enrique Uribe. Todos los derechos reservados.</p>
           </div>
           <div className="footer-credits">
-            <p>Hecho con ❤️ y React.js</p>
+            <p>Desarrollado con React + Vite</p>
           </div>
         </div>
       </div>

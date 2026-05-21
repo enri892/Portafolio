@@ -1,0 +1,90 @@
+/* Brutalist layer — usa TU paleta (slate + verde) */
+:root {
+  --brutal-border: 3px solid var(--text-primary);
+  --brutal-border-muted: 3px solid var(--border-light);
+  --brutal-shadow: 8px 8px 0 var(--accent-cta);
+  --brutal-shadow-muted: 8px 8px 0 var(--tertiary-black);
+  --brutal-radius: 0px;
+  --brutal-radius-soft: 4px;
+}
+
+.brutal-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-cta);
+}
+
+.brutal-section-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.section-heading {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.section-heading::after {
+  width: 80px;
+  height: 4px;
+  background: var(--accent-cta);
+  border-radius: 0;
+}
+
+.brutal-marquee {
+  overflow: hidden;
+  border-top: var(--brutal-border-muted);
+  border-bottom: var(--brutal-border-muted);
+  background: var(--secondary-black);
+  padding: 14px 0;
+  margin-bottom: 48px;
+}
+
+.brutal-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: brutal-marquee 28s linear infinite;
+  gap: 0;
+}
+
+.brutal-marquee__track span {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding-right: 48px;
+  white-space: nowrap;
+}
+
+.brutal-marquee__track span strong {
+  color: var(--accent-cta);
+}
+
+@keyframes brutal-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brutal-marquee__track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+}

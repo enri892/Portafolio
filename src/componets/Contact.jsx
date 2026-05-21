@@ -23,10 +23,14 @@ function Contact() {
   return (
     <section id="contacto" className="contact">
       <div className="container">
-        <h2 ref={titleRef}>Contacto</h2>
-        <div className="contact-content" ref={contentRef}>
+        <span className="brutal-section-tag">// Hablemos</span>
+        <h2 ref={titleRef} className="section-heading" data-brutal>Contacto</h2>
+        <p className="contact-intro">
+          Siempre entusiasmado por nuevas metas, colaboraciones y retos que sumen.
+          Cuéntame tu idea y vemos cómo podemos trabajar juntos.
+        </p>
+        <div className="contact-content contact-content--brutal" ref={contentRef} data-brutal-stagger>
           <div className="contact-info">
-
             <div className="contact-details">
               <div className="contact-item">
                 <FaEnvelope className="contact-icon" />
@@ -120,8 +124,8 @@ function Contact() {
                     id="message"
                     name="message"
                     required
-                    rows="5"
-                    placeholder="Enviame tu mensaje..."
+                    rows="7"
+                    placeholder="Cuéntame tu propuesta, idea o consulta..."
                   ></textarea>
                   <ValidationError 
                     prefix="Mensaje" 

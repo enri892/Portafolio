@@ -1,0 +1,156 @@
+.team-showcase {
+  padding: 80px 0;
+  background: var(--primary-black);
+  border-top: var(--brutal-border-muted);
+  border-bottom: var(--brutal-border-muted);
+}
+
+.team-showcase .section-heading {
+  text-align: left;
+  width: auto;
+  display: block;
+}
+
+.team-showcase .section-heading::after {
+  left: 0;
+  transform: none;
+}
+
+.team-showcase__intro {
+  max-width: 560px;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.team-showcase__layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.team-lead {
+  background: var(--secondary-black);
+  border: var(--brutal-border);
+  box-shadow: var(--brutal-shadow);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.team-lead__avatar {
+  width: 88px;
+  height: 88px;
+  background: var(--accent-cta);
+  color: #052e16;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--brutal-border);
+  box-shadow: 4px 4px 0 var(--text-primary);
+}
+
+.team-lead__info h3 {
+  font-size: 1.75rem;
+  margin: 8px 0 12px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.team-lead__info > p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.team-lead__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 18px 0 0;
+  margin: 0;
+  border-top: var(--brutal-border-muted);
+}
+
+.team-lead__highlights li {
+  background: var(--primary-black);
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border: 2px solid var(--border-color);
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.team-roles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.team-role-card {
+  background: var(--glass-bg);
+  border: var(--brutal-border-muted);
+  padding: 20px;
+  position: relative;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+  cursor: default;
+}
+
+.team-role-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--accent-cta);
+  border-color: var(--accent-cta);
+}
+
+.team-role-card__num {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--tertiary-black);
+  line-height: 1;
+}
+
+.team-role-card h4 {
+  font-size: 1.1rem;
+  margin: 6px 0 8px;
+  text-transform: uppercase;
+}
+
+.team-role-card p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .team-showcase__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .team-lead__highlights {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-roles {
+    grid-template-columns: 1fr;
+  }
+}

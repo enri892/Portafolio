@@ -12,22 +12,22 @@ export const useScrollAnimation = (delay = 0) => {
     // Ocultar el elemento inicialmente
     gsap.set(element, {
       opacity: 0,
-      y: 50
+      y: 50,
+      rotate: element.dataset.brutal ? -1.5 : 0,
     });
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
-          gsap.to(element,
-            {
-              opacity: 1,
-              y: 0,
-              duration: 1,
-              delay: delay,
-              ease: "power2.out"
-            }
-          );
+          gsap.to(element, {
+            opacity: 1,
+            y: 0,
+            rotate: 0,
+            duration: element.dataset.brutal ? 0.85 : 1,
+            delay: delay,
+            ease: element.dataset.brutal ? "power4.out" : "power2.out",
+          });
         }
       },
       {
@@ -56,7 +56,8 @@ export const useScrollStagger = (delay = 0) => {
     const children = container.children;
     gsap.set(children, {
       opacity: 0,
-      y: 30
+      y: 40,
+      x: container.dataset.brutalStagger ? -12 : 0,
     });
 
     const observer = new IntersectionObserver(
@@ -64,16 +65,15 @@ export const useScrollStagger = (delay = 0) => {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
           
-          gsap.to(children,
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.8,
-              delay: delay,
-              stagger: 0.2,
-              ease: "power2.out"
-            }
-          );
+          gsap.to(children, {
+            opacity: 1,
+            y: 0,
+            x: 0,
+            duration: container.dataset.brutalStagger ? 0.7 : 0.8,
+            delay: delay,
+            stagger: container.dataset.brutalStagger ? 0.14 : 0.2,
+            ease: container.dataset.brutalStagger ? "power4.out" : "power2.out",
+          });
         }
       },
       {
